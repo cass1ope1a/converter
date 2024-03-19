@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, make_response
 from PyPDF2 import PdfReader
 import tempfile
 
@@ -30,6 +30,12 @@ def convert_pdf_to_text():
         )
     else:
         return 'No file provided'
+
+@app.route('/metrics')
+def metrics():
+    response = make_response("hello world", 200)
+    response.mimetype = "text/plain"
+    return response
 
 
 if __name__ == '__main__':
