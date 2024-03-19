@@ -2,4 +2,5 @@ PyPDF==4.1.0
 flask==3.0.2
 pymorphy2==0.9.1
 setuptools==69.2.0
-gunicorn
+gunicorn==21.2.0
+PyPDF2==3.0.1
